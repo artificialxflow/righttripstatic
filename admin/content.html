@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محتوا و قوانین | حق‌گرد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 font-[Vazirmatn] antialiased">
+  <div id="global-toast" class="hidden"></div>
+  <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 flex w-64 translate-x-full flex-col border-l-2 border-slate-200 bg-white transition-transform lg:static lg:translate-x-0">
+      <div class="p-4 border-b"><a href="../index.html" class="font-bold text-teal-800">حق‌گرد</a></div>
+      <nav class="flex-1 p-3 text-sm">
+        <a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📊 داشبورد</a>
+        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">💬 سؤالات</a>
+        <a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📋 قراردادها</a>
+        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📚 محتوا</a>
+        <a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👨‍⚖️ متخصصان</a>
+        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">🤖 AI</a>
+        <a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👥 کاربران</a>
+        <a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📈 گزارش‌ها</a>
+        <a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">⚙️ تنظیمات</a>
+      </nav>
+    </aside>
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="flex items-center justify-between gap-3 border-b-2 border-slate-200 bg-white px-4 py-3">
+        <div class="flex items-center gap-3"><button id="admin-menu-toggle" type="button" class="lg:hidden border-2 rounded-lg p-2">☰</button><span class="font-semibold text-sm">محتوا و قوانین</span></div>
+        <button type="button" data-demo-toast="فرم افزودن (نمایشی)" class="btn-primary text-sm py-2">+ افزودن</button>
+      </header>
+      <main class="p-4 sm:p-6 grid gap-4 lg:grid-cols-3">
+        <div class="card-bordered p-4 lg:col-span-1">
+          <p class="font-bold text-sm">دسته‌بندی</p>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li class="rounded-lg border-2 border-teal-200 bg-teal-50 px-3 py-2">📁 قوانین گردشگری</li>
+            <li class="rounded-lg border border-slate-200 px-3 py-2 mr-4">↳ مسئولیت مدنی</li>
+            <li class="rounded-lg border border-slate-200 px-3 py-2 mr-4">↳ قراردادها</li>
+            <li class="rounded-lg border-2 border-slate-200 px-3 py-2">📁 راهنماها</li>
+          </ul>
+        </div>
+        <div class="card-bordered lg:col-span-2 overflow-hidden">
+          <table class="w-full text-sm">
+            <thead class="bg-slate-50"><tr><th class="px-4 py-3 text-right">عنوان</th><th class="px-4 py-3 text-right">نوع</th></tr></thead>
+            <tbody class="divide-y">
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">ماده ۱۲ — خدمات گردشگری</td><td class="px-4 py-3">بند قانون</td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">راهنمای حوادث سفر</td><td class="px-4 py-3">مقاله</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
