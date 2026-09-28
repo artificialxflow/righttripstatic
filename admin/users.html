@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کاربران | حق‌گرد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 font-[Vazirmatn] antialiased">
+  <div id="global-toast" class="hidden"></div>
+  <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 flex w-64 translate-x-full flex-col border-l-2 border-slate-200 bg-white transition-transform lg:static lg:translate-x-0">
+      <div class="p-4 border-b"><a href="../index.html" class="font-bold text-teal-800">حق‌گرد</a></div>
+      <nav class="flex-1 p-3 text-sm">
+        <a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📊 داشبورد</a>
+        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">💬 سؤالات</a>
+        <a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📋 قراردادها</a>
+        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📚 محتوا</a>
+        <a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👨‍⚖️ متخصصان</a>
+        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">🤖 AI</a>
+        <a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👥 کاربران</a>
+        <a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📈 گزارش‌ها</a>
+        <a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">⚙️ تنظیمات</a>
+      </nav>
+    </aside>
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="flex items-center gap-3 border-b-2 bg-white px-4 py-3"><button id="admin-menu-toggle" type="button" class="lg:hidden border-2 rounded-lg p-2">☰</button><span class="font-semibold text-sm">کاربران و نقش‌ها</span></header>
+      <main class="p-4 sm:p-6">
+        <input type="search" placeholder="جست‌وجو..." class="mb-4 max-w-md w-full rounded-lg border-2 px-4 py-2 text-sm" />
+        <div class="table-responsive card-bordered">
+          <table class="w-full min-w-[640px] text-sm">
+            <thead class="bg-slate-50"><tr><th class="px-4 py-3 text-right">نام</th><th class="px-4 py-3 text-right">نقش</th><th class="px-4 py-3 text-right">ایمیل</th></tr></thead>
+            <tbody class="divide-y">
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">مدیر سیستم</td><td class="px-4 py-3"><span class="badge badge-refer">ادمین</span></td><td class="px-4 py-3">admin@righttriplaw.ir</td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">دکتر احمدی</td><td class="px-4 py-3"><span class="badge badge-done">وکیل</span></td><td class="px-4 py-3">lawyer@example.com</td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">علی کاربر</td><td class="px-4 py-3"><span class="badge badge-inactive">کاربر عادی</span></td><td class="px-4 py-3">user@example.com</td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">نهاد گردشگری</td><td class="px-4 py-3"><span class="badge badge-pending">نماینده نهاد</span></td><td class="px-4 py-3">org@example.com</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-4 flex justify-center gap-2 text-sm">
+          <button type="button" class="rounded-lg border-2 border-slate-200 px-3 py-1">قبلی</button>
+          <span class="px-3 py-1">صفحه ۱ از ۵</span>
+          <button type="button" class="rounded-lg border-2 border-teal-500 bg-teal-50 px-3 py-1">بعدی</button>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
