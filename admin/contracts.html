@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قراردادها | حق‌گرد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 font-[Vazirmatn] antialiased">
+  <div id="global-toast" class="hidden"></div>
+  <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 flex w-64 translate-x-full flex-col border-l-2 border-slate-200 bg-white transition-transform lg:static lg:translate-x-0">
+      <div class="p-4 border-b"><a href="../index.html" class="font-bold text-teal-800">حق‌گرد</a></div>
+      <nav class="flex-1 p-3 text-sm space-y-0.5">
+        <a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📊 داشبورد</a>
+        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">💬 سؤالات</a>
+        <a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📋 قراردادها</a>
+        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📚 محتوا</a>
+        <a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👨‍⚖️ متخصصان</a>
+        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">🤖 AI</a>
+        <a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👥 کاربران</a>
+        <a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📈 گزارش‌ها</a>
+        <a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">⚙️ تنظیمات</a>
+      </nav>
+    </aside>
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="flex items-center gap-3 border-b-2 border-slate-200 bg-white px-4 py-3">
+        <button id="admin-menu-toggle" type="button" class="lg:hidden border-2 border-slate-200 rounded-lg p-2">☰</button>
+        <span class="font-semibold text-sm">مدیریت قراردادها</span>
+      </header>
+      <main class="p-4 sm:p-6">
+        <div class="table-responsive card-bordered">
+          <table class="w-full min-w-[640px] text-sm">
+            <thead class="bg-slate-50"><tr><th class="px-4 py-3 text-right">قالب</th><th class="px-4 py-3 text-right">وضعیت</th><th class="px-4 py-3 text-right">عملیات</th></tr></thead>
+            <tbody class="divide-y">
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">رزرو تور داخلی</td><td class="px-4 py-3"><span class="badge badge-active">فعال</span></td><td class="px-4 py-3"><button data-demo-toast="دانلود نمایشی" class="text-teal-700 ml-2">دانلود</button><button data-demo-toast="ویرایش نمایشی" class="text-orange-700">ویرایش</button></td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">قرارداد هتل</td><td class="px-4 py-3"><span class="badge badge-active">فعال</span></td><td class="px-4 py-3"><button data-demo-toast class="text-teal-700 ml-2">دانلود</button><button data-demo-toast class="text-orange-700">ویرایش</button></td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">راهنمای گردشگری</td><td class="px-4 py-3"><span class="badge badge-active">فعال</span></td><td class="px-4 py-3"><button data-demo-toast class="text-teal-700 ml-2">دانلود</button><button data-demo-toast class="text-orange-700">ویرایش</button></td></tr>
+              <tr class="hover:bg-slate-50"><td class="px-4 py-3">بیمه مسافرتی</td><td class="px-4 py-3"><span class="badge badge-inactive">غیرفعال</span></td><td class="px-4 py-3"><button data-demo-toast class="text-teal-700 ml-2">دانلود</button><button data-demo-toast class="text-orange-700">ویرایش</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
