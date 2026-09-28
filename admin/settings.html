@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تنظیمات | حق‌گرد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 font-[Vazirmatn] antialiased">
+  <div id="global-toast" class="hidden"></div>
+  <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 flex w-64 translate-x-full flex-col border-l-2 border-slate-200 bg-white transition-transform lg:static lg:translate-x-0">
+      <div class="p-4 border-b"><a href="../index.html" class="font-bold text-teal-800">حق‌گرد</a></div>
+      <nav class="flex-1 p-3 text-sm">
+        <a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📊 داشبورد</a>
+        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">💬 سؤالات</a>
+        <a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📋 قراردادها</a>
+        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📚 محتوا</a>
+        <a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👨‍⚖️ متخصصان</a>
+        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">🤖 AI</a>
+        <a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">👥 کاربران</a>
+        <a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">📈 گزارش‌ها</a>
+        <a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 hover:bg-slate-50">⚙️ تنظیمات</a>
+      </nav>
+    </aside>
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="flex items-center gap-3 border-b-2 bg-white px-4 py-3"><button id="admin-menu-toggle" type="button" class="lg:hidden border-2 rounded-lg p-2">☰</button><span class="font-semibold text-sm">تنظیمات سایت</span></header>
+      <main class="p-4 sm:p-6 max-w-xl">
+        <form class="card-bordered space-y-4 p-6" onsubmit="event.preventDefault();">
+          <div>
+            <label class="block text-sm font-medium mb-1">نام برند (فارسی)</label>
+            <input type="text" value="حق‌گرد" class="w-full rounded-lg border-2 border-slate-200 px-4 py-2 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">نام برند (انگلیسی)</label>
+            <input type="text" value="RightTrip Law" class="w-full rounded-lg border-2 border-slate-200 px-4 py-2 text-sm" dir="ltr" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">رنگ accent (نمایشی)</label>
+            <input type="color" value="#0d9488" class="h-10 w-full rounded border-2 border-slate-200" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">لوگو</label>
+            <div class="flex h-24 items-center justify-center rounded-lg border-2 border-dashed border-slate-300 bg-slate-50 text-sm text-slate-500">آپلود placeholder</div>
+          </div>
+          <button type="button" data-demo-toast="تنظیمات با موفقیت ذخیره شد (نمایشی)." class="btn-primary w-full">ذخیره تنظیمات</button>
+        </form>
+      </main>
+    </div>
+  </div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
