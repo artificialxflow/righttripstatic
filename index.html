@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حق‌گرد | RightTrip Law — پلتفرم هوشمند حقوق گردشگری</title>
+  <meta name="description" content="مرجع هوشمند حقوق گردشگری — از سؤال تا قرارداد، یک پلتفرم" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#0d9488', dark: '#0f766e' },
+            cta: { DEFAULT: '#ea580c', dark: '#c2410c' },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <div id="global-toast" class="hidden" role="status" aria-live="polite"></div>
+
+  <!-- Header -->
+  <header id="site-header" class="sticky top-0 z-40 border-b-2 border-slate-200 bg-white/95 backdrop-blur transition-shadow">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#" class="flex shrink-0 items-center gap-2">
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-teal-600 bg-teal-50 text-lg">⚖️</span>
+        <span class="leading-tight">
+          <span class="block text-lg font-bold text-teal-800">حق‌گرد</span>
+          <span class="block text-xs font-medium text-slate-500">RightTrip Law</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="منوی اصلی">
+        <a href="#home" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">خانه</a>
+        <a href="#services" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">خدمات</a>
+        <a href="#knowledge" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">دانش حقوقی</a>
+        <a href="#experts" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">متخصصان</a>
+        <a href="#ai" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">دستیار هوشمند</a>
+        <a href="#about" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">درباره ما</a>
+        <a href="#contact" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">تماس</a>
+      </nav>
+
+      <div class="hidden items-center gap-2 sm:flex">
+        <a href="login.html" class="btn-secondary text-sm">ورود</a>
+        <a href="login.html" class="btn-primary text-sm">ثبت‌نام / شروع رایگان</a>
+      </div>
+
+      <button id="menu-toggle" type="button" class="rounded-lg border-2 border-slate-200 p-2 lg:hidden" aria-label="باز کردن منو">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-overlay" class="fixed inset-0 z-50 hidden bg-black/40 lg:hidden"></div>
+  <aside id="mobile-menu" class="fixed inset-y-0 right-0 z-50 hidden w-72 border-l-2 border-slate-200 bg-white p-6 shadow-xl lg:hidden">
+    <div class="mb-6 flex items-center justify-between">
+      <span class="font-bold text-teal-800">حق‌گرد</span>
+      <button id="menu-close" type="button" class="rounded-lg border border-slate-200 p-1" aria-label="بستن منو">✕</button>
+    </div>
+    <nav class="flex flex-col gap-1">
+      <a href="#home" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">خانه</a>
+      <a href="#services" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">خدمات</a>
+      <a href="#knowledge" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">دانش حقوقی</a>
+      <a href="#experts" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">متخصصان</a>
+      <a href="#ai" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">دستیار هوشمند</a>
+      <a href="#about" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">درباره ما</a>
+      <a href="#contact" class="rounded-lg px-3 py-2 font-medium hover:bg-teal-50">تماس</a>
+      <hr class="my-3 border-slate-200" />
+      <a href="login.html" class="btn-secondary text-center text-sm">ورود</a>
+      <a href="login.html" class="btn-primary mt-2 text-center text-sm">شروع رایگان</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="border-b-2 border-slate-200 bg-gradient-to-b from-teal-50/80 to-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-20">
+        <div>
+          <p class="mb-3 inline-flex items-center gap-2 rounded-full border-2 border-teal-200 bg-white px-4 py-1 text-sm font-medium text-teal-800">
+            ⚖️ ✈️ پلتفرم تخصصی حقوق گردشگری
+          </p>
+          <h1 class="text-3xl font-extrabold leading-snug text-slate-900 sm:text-4xl lg:text-[2.35rem]">
+            مرجع هوشمند حقوق گردشگری — از سؤال تا قرارداد، یک پلتفرم
+          </h1>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            ارتباط میان <strong>گردشگر</strong>، <strong>فعالان صنعت گردشگری</strong>، <strong>متخصصان حقوقی</strong>،
+            <strong>دانشگاه‌ها</strong> و <strong>نهادها</strong> — با جست‌وجوی قوانین، پرسش حقوقی، قرارداد، مسئولیت حوادث و دستیار هوش مصنوعی.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="login.html" class="btn-primary">شروع رایگان</a>
+            <a href="#services" class="btn-secondary">مشاهده خدمات</a>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3 text-sm">
+            <span class="rounded-lg border-2 border-indigo-200 bg-indigo-50 px-3 py-2 font-medium text-indigo-900">🏛️ قابل ارائه به نهادها و سرمایه‌گذاران</span>
+            <span class="rounded-lg border-2 border-emerald-200 bg-emerald-50 px-3 py-2 font-medium text-emerald-900">📈 محصول‌محور و توسعه‌پذیر</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="card-bordered overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=80" alt="نمای هوایی سفر و گردشگری" class="h-64 w-full object-cover sm:h-80" width="900" height="600" />
+          </div>
+          <div class="absolute -bottom-4 -left-2 card-bordered max-w-xs p-4 sm:-left-6">
+            <p class="text-sm font-semibold text-indigo-900">🤖 دستیار حقوقی AI</p>
+            <p class="mt-1 text-xs text-slate-600">تحلیل اولیه + ارجاع به وکیل</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audience -->
+    <section id="about" class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">برای چه کسانی؟</h2>
+          <p class="mt-2 text-slate-600">اکوسیستم حقوق گردشگری در یک بستر واحد</p>
+        </div>
+        <div class="mt-6 flex justify-center gap-2">
+          <button type="button" data-audience-tab="traveler" class="rounded-lg border-2 border-teal-700 bg-teal-600 px-4 py-2 text-sm font-semibold text-white">گردشگر</button>
+          <button type="button" data-audience-tab="business" class="rounded-lg border-2 border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700">کسب‌وکار</button>
+        </div>
+        <div data-audience-panel="traveler" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card-bordered border-teal-300 p-5 transition hover:border-teal-500">
+            <span class="text-3xl">🧳</span>
+            <h3 class="mt-3 font-bold text-teal-900">گردشگر</h3>
+            <p class="mt-2 text-sm text-slate-600">حقوق خود در سفر را بشناسید و سؤال بپرسید.</p>
+            <a href="#services" class="mt-4 inline-block text-sm font-semibold text-teal-700">بیشتر بدانید ←</a>
+          </article>
+          <article class="card-bordered border-orange-300 p-5">
+            <span class="text-3xl">🏨</span>
+            <h3 class="mt-3 font-bold text-orange-900">فعالان گردشگری</h3>
+            <p class="mt-2 text-sm text-slate-600">آژانس، هتل، راهنما — قرارداد و مسئولیت.</p>
+            <a href="#services" class="mt-4 inline-block text-sm font-semibold text-orange-700">بیشتر بدانید ←</a>
+          </article>
+          <article class="card-bordered border-violet-300 p-5">
+            <span class="text-3xl">⚖️</span>
+            <h3 class="mt-3 font-bold text-violet-900">متخصصان حقوقی</h3>
+            <p class="mt-2 text-sm text-slate-600">مشاوره تخصصی و پاسخ به پرونده‌های گردشگری.</p>
+            <a href="#experts" class="mt-4 inline-block text-sm font-semibold text-violet-700">بیشتر بدانید ←</a>
+          </article>
+          <article class="card-bordered border-blue-300 p-5">
+            <span class="text-3xl">🎓</span>
+            <h3 class="mt-3 font-bold text-blue-900">دانشگاه‌ها و نهادها</h3>
+            <p class="mt-2 text-sm text-slate-600">مرجع دانش و همکاری پژوهشی.</p>
+            <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-blue-700">بیشتر بدانید ←</a>
+          </article>
+        </div>
+        <div data-audience-panel="business" class="mt-8 hidden grid gap-4 sm:grid-cols-2">
+          <article class="card-bordered border-orange-400 p-6 sm:col-span-2">
+            <h3 class="text-lg font-bold text-orange-900">📋 ابزارهای کسب‌وکار گردشگری</h3>
+            <p class="mt-2 text-slate-600">قالب قرارداد، مدیریت مسئولیت مدنی، آموزش کارکنان و گزارش‌گیری — همه در یک پنل یکپارچه (در نسخه‌های بعد).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="border-y-2 border-slate-200 bg-white py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">خدمات اصلی</h2>
+        <p class="mt-2 text-slate-600">خدمات کاربردی، نه صرفاً محتوای خبری</p>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card-bordered p-5 hover:border-teal-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-teal-500 bg-teal-50 text-teal-800">📜</div>
+            <h3 class="mt-4 font-bold">جست‌وجوی قوانین</h3>
+            <p class="mt-2 text-sm text-slate-600">مقررات مرتبط با سفر و گردشگری را سریع پیدا کنید.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-teal-700">مشاهده</button>
+          </div>
+          <div class="card-bordered p-5 hover:border-violet-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-violet-500 bg-violet-50">💬</div>
+            <h3 class="mt-4 font-bold">پرسش و پاسخ حقوقی</h3>
+            <p class="mt-2 text-sm text-slate-600">سؤال خود را مطرح کنید و پاسخ تخصصی دریافت کنید.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-violet-700">مشاهده</button>
+          </div>
+          <div class="card-bordered p-5 hover:border-orange-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-orange-500 bg-orange-50">📋</div>
+            <h3 class="mt-4 font-bold">قرارداد گردشگری</h3>
+            <p class="mt-2 text-sm text-slate-600">دریافت و تنظیم قرارداد تور، هتل و خدمات.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-orange-700">مشاهده</button>
+          </div>
+          <div class="card-bordered p-5 hover:border-red-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-red-400 bg-red-50">🚨</div>
+            <h3 class="mt-4 font-bold">مسئولیت و حوادث</h3>
+            <p class="mt-2 text-sm text-slate-600">راهنمای حقوقی حوادث و مسئولیت مدنی در سفر.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-red-700">مشاهده</button>
+          </div>
+          <div id="experts" class="card-bordered p-5 hover:border-emerald-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-emerald-500 bg-emerald-50">👨‍⚖️</div>
+            <h3 class="mt-4 font-bold">دسترسی به وکیل</h3>
+            <p class="mt-2 text-sm text-slate-600">اتصال به مشاوران حقوق گردشگری تأییدشده.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-emerald-700">مشاهده</button>
+          </div>
+          <div id="ai" class="card-bordered border-indigo-300 bg-indigo-50/30 p-5">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-indigo-600 bg-indigo-100">🤖</div>
+            <h3 class="mt-4 font-bold text-indigo-950">دستیار هوش مصنوعی</h3>
+            <p class="mt-2 text-sm text-slate-600">جست‌وجو و تحلیل اولیه مسائل حقوق گردشگری.</p>
+            <a href="#ai-section" class="mt-4 inline-block text-sm font-semibold text-indigo-700">مشاهده</a>
+          </div>
+          <div id="knowledge" class="card-bordered p-5 hover:border-blue-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-blue-500 bg-blue-50">📚</div>
+            <h3 class="mt-4 font-bold">کتابخانه دانش</h3>
+            <p class="mt-2 text-sm text-slate-600">مقالات، بندهای قانون و راهنماهای تخصصی.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-blue-700">مشاهده</button>
+          </div>
+          <div class="card-bordered p-5 hover:border-amber-400">
+            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-amber-500 bg-amber-50">📰</div>
+            <h3 class="mt-4 font-bold">تحلیل تخصصی</h3>
+            <p class="mt-2 text-sm text-slate-600">اخبار و تحلیل حقوقی حوزه گردشگری.</p>
+            <button type="button" class="mt-4 text-sm font-semibold text-amber-800">مشاهده</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Section -->
+    <section id="ai-section" class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="card-bordered overflow-hidden border-indigo-300 bg-gradient-to-l from-indigo-50 to-white lg:grid lg:grid-cols-2">
+          <div class="p-8 lg:p-12">
+            <h2 class="text-2xl font-bold text-indigo-950">دستیار هوشمند حق‌گرد 🤖</h2>
+            <p class="mt-3 text-slate-600">تحلیل اولیه بر پایه دانش حقوق گردشگری — همیشه با امکان ارجاع به متخصص انسان.</p>
+            <ul class="mt-6 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><span class="text-emerald-600">✓</span> جست‌وجوی سریع در مقررات</li>
+              <li class="flex gap-2"><span class="text-emerald-600">✓</span> خلاصه مسئولیت‌ها و ریسک‌ها</li>
+              <li class="flex gap-2"><span class="text-emerald-600">✓</span> پیشنهاد گام بعدی (مشاوره رسمی)</li>
+            </ul>
+          </div>
+          <div class="border-t-2 border-indigo-200 bg-white p-6 lg:border-t-0 lg:border-r-2">
+            <div class="space-y-4">
+              <div class="rounded-xl border-2 border-slate-200 bg-slate-50 p-4 text-sm">
+                <span class="font-semibold text-slate-800">شما:</span>
+                <p class="mt-1">مسئولیت آژانس در تأخیر پرواز چیست؟ ✈️</p>
+              </div>
+              <div class="rounded-xl border-2 border-indigo-200 bg-indigo-50 p-4 text-sm">
+                <span class="font-semibold text-indigo-900">حق‌گرد AI:</span>
+                <p class="mt-1 text-slate-700">بسته به نوع قرارداد و شرایط force majeure متفاوت است. به‌طور کلی آژانس موظف به اطلاع‌رسانی و جبران خدمات جایگزین است؛ برای پرونده شما مشاوره رسمی توصیه می‌شود.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="border-y-2 border-slate-200 bg-white py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="text-center text-2xl font-bold sm:text-3xl">چرا حق‌گرد؟</h2>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="card-bordered p-6 text-center">
+            <span class="text-3xl">🎯</span>
+            <h3 class="mt-3 font-bold">جامع و تخصصی</h3>
+            <p class="mt-2 text-sm text-slate-600">تمرکز ۱۰۰٪ بر حقوق گردشگری</p>
+          </div>
+          <div class="card-bordered p-6 text-center">
+            <span class="text-3xl">🤖</span>
+            <h3 class="mt-3 font-bold">هوشمند (AI)</h3>
+            <p class="mt-2 text-sm text-slate-600">دستیار جست‌وجو و تحلیل اولیه</p>
+          </div>
+          <div class="card-bordered p-6 text-center">
+            <span class="text-3xl">🇮🇷</span>
+            <h3 class="mt-3 font-bold">مرجع ملی</h3>
+            <p class="mt-2 text-sm text-slate-600">قابل توسعه برای نهادها و وزارتخانه‌ها</p>
+          </div>
+          <div class="card-bordered p-6 text-center">
+            <span class="text-3xl">🔗</span>
+            <h3 class="mt-3 font-bold">پل ذی‌نفعان</h3>
+            <p class="mt-2 text-sm text-slate-600">یک اکوسیستم واحد</p>
+          </div>
+        </div>
+        <div class="mt-12 grid grid-cols-3 gap-4 text-center">
+          <div class="card-bordered border-teal-300 py-6">
+            <p class="text-3xl font-extrabold text-teal-700">+۵۰۰</p>
+            <p class="text-sm text-slate-600">سؤال حقوقی</p>
+          </div>
+          <div class="card-bordered border-orange-300 py-6">
+            <p class="text-3xl font-extrabold text-orange-600">+۱۲۰</p>
+            <p class="text-sm text-slate-600">قرارداد</p>
+          </div>
+          <div class="card-bordered border-violet-300 py-6">
+            <p class="text-3xl font-extrabold text-violet-700">+۸۰</p>
+            <p class="text-sm text-slate-600">متخصص</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="text-2xl font-bold sm:text-3xl">نحوه کار</h2>
+        <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="card-bordered relative p-6 pt-10">
+            <span class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-teal-600 bg-teal-50 text-sm font-bold text-teal-800">۱</span>
+            <h3 class="font-bold">ثبت‌نام</h3>
+            <p class="mt-2 text-sm text-slate-600">حساب رایگان بسازید.</p>
+          </li>
+          <li class="card-bordered relative p-6 pt-10">
+            <span class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-teal-600 bg-teal-50 text-sm font-bold">۲</span>
+            <h3 class="font-bold">جست‌وجو / سؤال</h3>
+            <p class="mt-2 text-sm text-slate-600">قانون یا پرسش حقوقی.</p>
+          </li>
+          <li class="card-bordered relative p-6 pt-10">
+            <span class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-teal-600 bg-teal-50 text-sm font-bold">۳</span>
+            <h3 class="font-bold">راهنما / قرارداد</h3>
+            <p class="mt-2 text-sm text-slate-600">دریافت خروجی کاربردی.</p>
+          </li>
+          <li class="card-bordered relative p-6 pt-10">
+            <span class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border-2 border-teal-600 bg-teal-50 text-sm font-bold">۴</span>
+            <h3 class="font-bold">متخصص</h3>
+            <p class="mt-2 text-sm text-slate-600">در صورت نیاز، مشاوره رسمی.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="border-t-2 border-slate-200 bg-slate-100/50 py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <h2 class="text-2xl font-bold">نظر کاربران</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          <blockquote class="card-bordered p-6">
+            <p class="text-sm text-slate-700">«قرارداد تور را سریع تنظیم کردیم؛ شفاف و حرفه‌ای.»</p>
+            <footer class="mt-4 text-sm font-semibold text-teal-800">— مدیر آژانس مسافرتی</footer>
+          </blockquote>
+          <blockquote class="card-bordered p-6">
+            <p class="text-sm text-slate-700">«پاسخ حقوقی درباره تأخیر پرواز خیلی به ما کمک کرد.»</p>
+            <footer class="mt-4 text-sm font-semibold text-teal-800">— گردشگر</footer>
+          </blockquote>
+          <blockquote class="card-bordered p-6">
+            <p class="text-sm text-slate-700">«پلتفرم برای پژوهش دانشجویان حقوق گردشگری عالی است.»</p>
+            <footer class="mt-4 text-sm font-semibold text-teal-800">— عضو هیئت علمی</footer>
+          </blockquote>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-6 opacity-70">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=120&h=48&fit=crop" alt="لوگوی نمایشی دانشگاه" class="h-10 rounded border border-slate-200 bg-white object-cover" width="120" height="48" />
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=120&h=48&fit=crop" alt="لوگوی نمایشی نهاد" class="h-10 rounded border border-slate-200 bg-white object-cover" width="120" height="48" />
+          <span class="text-sm font-medium text-slate-500">همکاران و نهادها (نمایشی)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6">
+        <h2 class="text-2xl font-bold text-center">سؤالات متداول</h2>
+        <div class="mt-8 space-y-3">
+          <div class="faq-item card-bordered overflow-hidden">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between p-4 text-right font-semibold">
+              آیا پاسخ‌های AI جایگزین وکیل است؟
+              <span class="faq-chevron transition-transform">▼</span>
+            </button>
+            <div class="faq-content px-4 pb-4 text-sm text-slate-600">خیر. دستیار هوشمند فقط تحلیل اولیه ارائه می‌دهد؛ برای پرونده‌های جدی باید با وکیل مشورت کنید.</div>
+          </div>
+          <div class="faq-item card-bordered overflow-hidden">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between p-4 text-right font-semibold">
+              چه قراردادهایی پشتیبانی می‌شود؟
+              <span class="faq-chevron transition-transform">▼</span>
+            </button>
+            <div class="faq-content px-4 pb-4 text-sm text-slate-600">تور، هتل، راهنمای گردشگری، بیمه سفر و خدمات مرتبط (نمایشی در این نسخه استاتیک).</div>
+          </div>
+          <div class="faq-item card-bordered overflow-hidden">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between p-4 text-right font-semibold">
+              ثبت‌نام برای گردشگر رایگان است؟
+              <span class="faq-chevron transition-transform">▼</span>
+            </button>
+            <div class="faq-content px-4 pb-4 text-sm text-slate-600">بله، شروع رایگان برای جست‌وجو و پرسش‌های پایه در نظر گرفته شده است.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="border-y-2 border-teal-200 bg-teal-600 py-14 text-white">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <h2 class="text-2xl font-bold sm:text-3xl">آماده‌اید حقوق سفر خود را حرفه‌ای مدیریت کنید؟</h2>
+        <a href="login.html" class="mt-8 inline-block rounded-lg border-2 border-orange-300 bg-cta px-8 py-3 font-bold text-white shadow-lg hover:bg-cta-dark">ثبت‌نام رایگان</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="border-t-2 border-slate-200 bg-white py-12">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4 sm:px-6">
+      <div>
+        <p class="font-bold text-teal-800">حق‌گرد | RightTrip Law</p>
+        <p class="mt-2 text-sm text-slate-600">پلتفرم هوشمند حقوق گردشگری</p>
+      </div>
+      <div>
+        <p class="font-semibold">پیوندها</p>
+        <ul class="mt-2 space-y-1 text-sm text-slate-600">
+          <li><a href="#services" class="hover:text-teal-700">خدمات</a></li>
+          <li><a href="login.html" class="hover:text-teal-700">ورود</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold">تماس</p>
+        <p class="mt-2 text-sm text-slate-600">info@righttriplaw.ir</p>
+        <p class="text-sm text-slate-600">۰۲۱-۹۱۰۰۰۰۰۰</p>
+      </div>
+      <div>
+        <p class="font-semibold">شبکه‌ها</p>
+        <p class="mt-2 text-sm text-slate-600">LinkedIn · Instagram (نمایشی)</p>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-slate-500">© ۱۴۰۴ RightTrip Law — حق‌گرد. تمامی حقوق محفوظ است.</p>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+</body>
+</html>
