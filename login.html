@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورود | حق‌گرد — RightTrip Law</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="min-h-screen bg-gradient-to-b from-teal-50 to-slate-100 font-[Vazirmatn] antialiased">
+  <div id="global-toast" class="hidden" role="status"></div>
+
+  <div class="mx-auto flex min-h-screen max-w-md flex-col justify-center px-4 py-12">
+    <a href="index.html" class="mb-8 text-center text-sm font-medium text-teal-700 hover:underline">← بازگشت به سایت</a>
+
+    <div class="card-bordered p-8">
+      <div class="mb-6 text-center">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-xl border-2 border-teal-600 bg-teal-50 text-2xl">⚖️</span>
+        <h1 class="mt-4 text-xl font-bold text-slate-900">ورود به حق‌گرد</h1>
+        <p class="mt-1 text-sm text-slate-600">RightTrip Law — نسخه نمایشی</p>
+      </div>
+
+      <form id="login-form" class="space-y-4" action="admin/dashboard.html" method="get">
+        <div>
+          <label for="email" class="mb-1 block text-sm font-medium text-slate-700">ایمیل یا موبایل</label>
+          <input id="email" name="email" type="text" autocomplete="username" placeholder="example@mail.com"
+            class="w-full rounded-lg border-2 border-slate-200 px-4 py-2.5 text-sm focus:border-teal-500 focus:outline-none" />
+        </div>
+        <div>
+          <label for="password" class="mb-1 block text-sm font-medium text-slate-700">رمز عبور</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••"
+            class="w-full rounded-lg border-2 border-slate-200 px-4 py-2.5 text-sm focus:border-teal-500 focus:outline-none" />
+        </div>
+        <button type="submit" class="btn-primary w-full">ورود به پنل</button>
+      </form>
+
+      <p class="mt-6 text-center text-xs text-slate-500">ورود استاتیک — بدون احراز هویت واقعی</p>
+    </div>
+  </div>
+
+  <script src="assets/js/common.js"></script>
+</body>
+</html>
