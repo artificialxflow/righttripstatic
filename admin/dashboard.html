@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داشبورد | حق‌گرد — پنل مدیریت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 font-[Vazirmatn] text-slate-800 antialiased">
+  <div id="global-toast" class="hidden"></div>
+  <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
+
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 flex w-64 translate-x-full flex-col border-l-2 border-slate-200 bg-white transition-transform lg:static lg:translate-x-0">
+      <div class="border-b-2 border-slate-100 p-4">
+        <a href="../index.html" class="font-bold text-teal-800">حق‌گرد</a>
+        <p class="text-xs text-slate-500">پنل مدیریت</p>
+      </div>
+      <nav class="flex-1 overflow-y-auto p-3 text-sm">
+        <a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📊 داشبورد</a>
+        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">💬 سؤالات حقوقی</a>
+        <a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📋 قراردادها</a>
+        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📚 محتوا و قوانین</a>
+        <a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">👨‍⚖️ متخصصان</a>
+        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🤖 دستیار AI</a>
+        <a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">👥 کاربران</a>
+        <a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📈 گزارش‌ها</a>
+        <a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">⚙️ تنظیمات</a>
+      </nav>
+      <div class="border-t border-slate-100 p-3">
+        <a href="../login.html" class="block text-center text-xs text-slate-500 hover:text-red-600">خروج (نمایشی)</a>
+      </div>
+    </aside>
+
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="sticky top-0 z-30 flex items-center justify-between gap-4 border-b-2 border-slate-200 bg-white px-4 py-3 sm:px-6">
+        <div class="flex items-center gap-3">
+          <button id="admin-menu-toggle" type="button" class="rounded-lg border-2 border-slate-200 p-2 lg:hidden" aria-label="منو">☰</button>
+          <nav class="text-sm text-slate-500" aria-label="breadcrumb">
+            <span class="text-slate-800 font-semibold">داشبورد</span>
+          </nav>
+        </div>
+        <div class="flex items-center gap-3">
+          <input type="search" placeholder="جست‌وجو..." class="hidden w-40 rounded-lg border-2 border-slate-200 px-3 py-1.5 text-sm sm:block md:w-56" />
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop" alt="تصویر پروفایل مدیر" class="h-9 w-9 rounded-full border-2 border-teal-500 object-cover" width="36" height="36" />
+        </div>
+      </header>
+
+      <main class="flex-1 p-4 sm:p-6">
+        <h1 class="text-xl font-bold sm:text-2xl">داشبورد اصلی</h1>
+        <p class="mt-1 text-sm text-slate-600">خلاصه وضعیت پلتفرم حق‌گرد</p>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="card-bordered border-teal-300 p-5">
+            <p class="text-sm text-slate-600">کاربران جدید (ماه)</p>
+            <p class="mt-2 text-3xl font-bold text-teal-700">۱۲۴</p>
+          </div>
+          <div class="card-bordered border-amber-300 p-5">
+            <p class="text-sm text-slate-600">سؤالات باز</p>
+            <p class="mt-2 text-3xl font-bold text-amber-700">۳۸</p>
+          </div>
+          <div class="card-bordered border-orange-300 p-5">
+            <p class="text-sm text-slate-600">قرارداد در انتظار</p>
+            <p class="mt-2 text-3xl font-bold text-orange-600">۱۵</p>
+          </div>
+          <div class="card-bordered border-violet-300 p-5">
+            <p class="text-sm text-slate-600">جلسات مشاوره</p>
+            <p class="mt-2 text-3xl font-bold text-violet-700">۹</p>
+          </div>
+        </div>
+
+        <div class="mt-6 card-bordered p-5">
+          <h2 class="font-bold">روند سؤالات هفتگی</h2>
+          <div class="mt-4 h-64">
+            <canvas id="questionsChart" aria-label="نمودار سؤالات"></canvas>
+          </div>
+        </div>
+
+        <div class="mt-6 card-bordered overflow-hidden">
+          <div class="border-b border-slate-200 px-4 py-3 font-bold">آخرین فعالیت‌ها</div>
+          <div class="table-responsive">
+            <table class="w-full min-w-[640px] text-sm">
+              <thead class="bg-slate-50 text-slate-600">
+                <tr>
+                  <th class="px-4 py-3 text-right font-semibold">سؤال</th>
+                  <th class="px-4 py-3 text-right font-semibold">کاربر</th>
+                  <th class="px-4 py-3 text-right font-semibold">وضعیت</th>
+                  <th class="px-4 py-3 text-right font-semibold">تاریخ</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3">مسئولیت تأخیر پرواز</td>
+                  <td class="px-4 py-3">علی رضایی</td>
+                  <td class="px-4 py-3"><span class="badge badge-pending">در انتظار</span></td>
+                  <td class="px-4 py-3">۱۴۰۴/۰۶/۲۵</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3">قرارداد رزرو هتل</td>
+                  <td class="px-4 py-3">سارا محمدی</td>
+                  <td class="px-4 py-3"><span class="badge badge-done">پاسخ‌داده</span></td>
+                  <td class="px-4 py-3">۱۴۰۴/۰۶/۲۴</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="px-4 py-3">حادثه اسکی</td>
+                  <td class="px-4 py-3">آژانس سفر نور</td>
+                  <td class="px-4 py-3"><span class="badge badge-refer">ارجاع به وکیل</span></td>
+                  <td class="px-4 py-3">۱۴۰۴/۰۶/۲۳</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctx = document.getElementById('questionsChart');
+      if (!ctx || !window.Chart) return;
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['شنبه', 'یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه'],
+          datasets: [{
+            label: 'تعداد سؤال',
+            data: [12, 19, 8, 15, 22, 18, 11],
+            borderColor: '#0d9488',
+            backgroundColor: 'rgba(13, 148, 136, 0.15)',
+            fill: true,
+            tension: 0.3,
+            borderWidth: 2,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { rtl: true, labels: { font: { family: 'Vazirmatn' } } } },
+          scales: { y: { beginAtZero: true } },
+        },
+      });
+    });
+  </script>
+</body>
+</html>
