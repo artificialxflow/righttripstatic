@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>حق‌گرد | RightTrip Law — پلتفرم هوشمند حقوق گردشگری</title>
+  <title>حقوق گردشگری | حق‌گرد — RightTrip Law</title>
   <meta name="description" content="مرجع هوشمند حقوق گردشگری — از سؤال تا قرارداد، یک پلتفرم" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,6 +22,8 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
+  <div class="pilot-ribbon">پایلوت استان خراسان رضوی — مرکز نوآوری میراث، گردشگری و صنایع‌دستی · طرح: سید مرتضی میری</div>
+
   <div id="global-toast" class="hidden" role="status" aria-live="polite"></div>
 
   <!-- Header -->
@@ -33,18 +32,17 @@
       <a href="#" class="flex shrink-0 items-center gap-2">
         <span class="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-teal-600 bg-teal-50 text-lg">⚖️</span>
         <span class="leading-tight">
-          <span class="block text-lg font-bold text-teal-800">حق‌گرد</span>
-          <span class="block text-xs font-medium text-slate-500">RightTrip Law</span>
+          <span class="block text-lg font-bold text-teal-900">حقوق گردشگری</span>
+          <span class="block text-xs font-medium text-slate-500">حق‌گرد · RightTrip Law</span>
         </span>
       </a>
 
       <nav class="hidden items-center gap-1 lg:flex" aria-label="منوی اصلی">
-        <a href="#home" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">خانه</a>
         <a href="#services" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">خدمات</a>
-        <a href="#knowledge" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">دانش حقوقی</a>
-        <a href="#experts" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">متخصصان</a>
-        <a href="#ai" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">دستیار هوشمند</a>
-        <a href="#about" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">درباره ما</a>
+        <a href="pages/academy.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">آکادمی</a>
+        <a href="pages/experts.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">متخصصان</a>
+        <a href="pages/assistant.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">دستیار AI</a>
+        <a href="about-project.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">درباره طرح</a>
         <a href="#contact" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-800">تماس</a>
       </nav>
 
@@ -81,7 +79,7 @@
 
   <main>
     <!-- Hero -->
-    <section id="home" class="border-b-2 border-slate-200 bg-gradient-to-b from-teal-50/80 to-white">
+    <section id="home" class="gradient-hero border-b-2 border-slate-200">
       <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-20">
         <div>
           <p class="mb-3 inline-flex items-center gap-2 rounded-full border-2 border-teal-200 bg-white px-4 py-1 text-sm font-medium text-teal-800">
@@ -161,60 +159,39 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services 11 -->
     <section id="services" class="border-y-2 border-slate-200 bg-white py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">خدمات اصلی</h2>
-        <p class="mt-2 text-slate-600">خدمات کاربردی، نه صرفاً محتوای خبری</p>
-        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="card-bordered p-5 hover:border-teal-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-teal-500 bg-teal-50 text-teal-800">📜</div>
-            <h3 class="mt-4 font-bold">جست‌وجوی قوانین</h3>
-            <p class="mt-2 text-sm text-slate-600">مقررات مرتبط با سفر و گردشگری را سریع پیدا کنید.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-teal-700">مشاهده</button>
-          </div>
-          <div class="card-bordered p-5 hover:border-violet-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-violet-500 bg-violet-50">💬</div>
-            <h3 class="mt-4 font-bold">پرسش و پاسخ حقوقی</h3>
-            <p class="mt-2 text-sm text-slate-600">سؤال خود را مطرح کنید و پاسخ تخصصی دریافت کنید.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-violet-700">مشاهده</button>
-          </div>
-          <div class="card-bordered p-5 hover:border-orange-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-orange-500 bg-orange-50">📋</div>
-            <h3 class="mt-4 font-bold">قرارداد گردشگری</h3>
-            <p class="mt-2 text-sm text-slate-600">دریافت و تنظیم قرارداد تور، هتل و خدمات.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-orange-700">مشاهده</button>
-          </div>
-          <div class="card-bordered p-5 hover:border-red-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-red-400 bg-red-50">🚨</div>
-            <h3 class="mt-4 font-bold">مسئولیت و حوادث</h3>
-            <p class="mt-2 text-sm text-slate-600">راهنمای حقوقی حوادث و مسئولیت مدنی در سفر.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-red-700">مشاهده</button>
-          </div>
-          <div id="experts" class="card-bordered p-5 hover:border-emerald-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-emerald-500 bg-emerald-50">👨‍⚖️</div>
-            <h3 class="mt-4 font-bold">دسترسی به وکیل</h3>
-            <p class="mt-2 text-sm text-slate-600">اتصال به مشاوران حقوق گردشگری تأییدشده.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-emerald-700">مشاهده</button>
-          </div>
-          <div id="ai" class="card-bordered border-indigo-300 bg-indigo-50/30 p-5">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-indigo-600 bg-indigo-100">🤖</div>
-            <h3 class="mt-4 font-bold text-indigo-950">دستیار هوش مصنوعی</h3>
-            <p class="mt-2 text-sm text-slate-600">جست‌وجو و تحلیل اولیه مسائل حقوق گردشگری.</p>
-            <a href="#ai-section" class="mt-4 inline-block text-sm font-semibold text-indigo-700">مشاهده</a>
-          </div>
-          <div id="knowledge" class="card-bordered p-5 hover:border-blue-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-blue-500 bg-blue-50">📚</div>
-            <h3 class="mt-4 font-bold">کتابخانه دانش</h3>
-            <p class="mt-2 text-sm text-slate-600">مقالات، بندهای قانون و راهنماهای تخصصی.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-blue-700">مشاهده</button>
-          </div>
-          <div class="card-bordered p-5 hover:border-amber-400">
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg border-2 border-amber-500 bg-amber-50">📰</div>
-            <h3 class="mt-4 font-bold">تحلیل تخصصی</h3>
-            <p class="mt-2 text-sm text-slate-600">اخبار و تحلیل حقوقی حوزه گردشگری.</p>
-            <button type="button" class="mt-4 text-sm font-semibold text-amber-800">مشاهده</button>
-          </div>
+        <h2 class="section-title reveal">۱۱ خدمت اصلی پلتفرم</h2>
+        <p class="section-sub reveal">هم‌تراز با طرح «حقوق گردشگری» — کلیک برای مشاهده UI</p>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <a href="pages/laws.html" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">📜</span><h3 class="mt-3 font-bold">بانک قوانین</h3><p class="mt-1 text-xs text-slate-600">جست‌وجوی هوشمند</p></a>
+          <a href="pages/assistant.html" class="card-bordered card-hover reveal border-indigo-300 bg-indigo-50/40 p-5 block"><span class="text-2xl">🤖</span><h3 class="mt-3 font-bold">دستیار AI</h3><p class="mt-1 text-xs text-slate-600">پاسخ اولیه + استناد</p></a>
+          <a href="pages/traveler.html" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">🧳</span><h3 class="mt-3 font-bold">حقوق گردشگر</h3><p class="mt-1 text-xs text-slate-600">آموزش و راهنما</p></a>
+          <a href="pages/business.html" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">🏨</span><h3 class="mt-3 font-bold">حقوق فعالان</h3><p class="mt-1 text-xs text-slate-600">هتل، آژانس، راهنما</p></a>
+          <a href="pages/contracts.html" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">📋</span><h3 class="mt-3 font-bold">قراردادساز</h3><p class="mt-1 text-xs text-slate-600">الگو و پیش‌نویس</p></a>
+          <a href="pages/risk.html" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">🎯</span><h3 class="mt-3 font-bold">ارزیابی ریسک</h3><p class="mt-1 text-xs text-slate-600">پیشگیری حقوقی</p></a>
+          <a href="pages/experts.html" id="experts" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">👨‍⚖️</span><h3 class="mt-3 font-bold">شبکه متخصصان</h3><p class="mt-1 text-xs text-slate-600">وکلا و مشاوران</p></a>
+          <a href="pages/academy.html" id="knowledge" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">📚</span><h3 class="mt-3 font-bold">آکادمی</h3><p class="mt-1 text-xs text-slate-600">دوره و دانشنامه</p></a>
+          <a href="pages/sports-law.html" id="sports" class="card-bordered card-hover reveal border-amber-400 bg-amber-50/50 p-5 block"><span class="text-2xl">🏃</span><h3 class="mt-3 font-bold">گردشگری ورزشی</h3><p class="mt-1 text-xs text-slate-600">تخصصی و متمایز</p></a>
+          <a href="pages/dispute.html" class="card-bordered card-hover reveal p-5 block"><span class="text-2xl">⚖️</span><h3 class="mt-3 font-bold">حل اختلاف</h3><p class="mt-1 text-xs text-slate-600">داوری گردشگری</p></a>
+          <a href="pages/case-studies.html" class="card-bordered card-hover reveal p-5 block sm:col-span-2 lg:col-span-1"><span class="text-2xl">📰</span><h3 class="mt-3 font-bold">مطالعات و آراء</h3><p class="mt-1 text-xs text-slate-600">بانک تحلیلی</p></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Khorasan -->
+    <section id="khorasan" class="py-14 bg-teal-50/60 border-b-2 border-teal-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 text-center reveal">
+        <h2 class="section-title">تمرکز فاز نخست: خراسان رضوی</h2>
+        <p class="section-sub">اعتبارسنجی در زیارتی · هتلداری · تور · راهنما · طبیعت · ورزشی</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-2">
+          <span class="rounded-lg border-2 border-teal-500 bg-white px-4 py-2 text-sm font-semibold text-teal-900">🕌 زیارتی</span>
+          <span class="rounded-lg border-2 border-orange-400 bg-white px-4 py-2 text-sm font-semibold">🏨 هتل</span>
+          <span class="rounded-lg border-2 border-violet-400 bg-white px-4 py-2 text-sm font-semibold">🚌 تور</span>
+          <span class="rounded-lg border-2 border-blue-400 bg-white px-4 py-2 text-sm font-semibold">🗺️ راهنما</span>
+          <span class="rounded-lg border-2 border-emerald-500 bg-white px-4 py-2 text-sm font-semibold">🏔️ طبیعت</span>
+          <span class="rounded-lg border-2 border-amber-500 bg-white px-4 py-2 text-sm font-semibold">🏃 ورزشی</span>
         </div>
       </div>
     </section>
@@ -226,11 +203,7 @@
           <div class="p-8 lg:p-12">
             <h2 class="text-2xl font-bold text-indigo-950">دستیار هوشمند حق‌گرد 🤖</h2>
             <p class="mt-3 text-slate-600">تحلیل اولیه بر پایه دانش حقوق گردشگری — همیشه با امکان ارجاع به متخصص انسان.</p>
-            <ul class="mt-6 space-y-2 text-sm text-slate-700">
-              <li class="flex gap-2"><span class="text-emerald-600">✓</span> جست‌وجوی سریع در مقررات</li>
-              <li class="flex gap-2"><span class="text-emerald-600">✓</span> خلاصه مسئولیت‌ها و ریسک‌ها</li>
-              <li class="flex gap-2"><span class="text-emerald-600">✓</span> پیشنهاد گام بعدی (مشاوره رسمی)</li>
-            </ul>
+            <a href="pages/assistant.html" class="btn-secondary mt-6 inline-block text-sm">ورود به دستیار</a>
           </div>
           <div class="border-t-2 border-indigo-200 bg-white p-6 lg:border-t-0 lg:border-r-2">
             <div class="space-y-4">
@@ -394,8 +367,10 @@
       <div>
         <p class="font-semibold">پیوندها</p>
         <ul class="mt-2 space-y-1 text-sm text-slate-600">
-          <li><a href="#services" class="hover:text-teal-700">خدمات</a></li>
-          <li><a href="login.html" class="hover:text-teal-700">ورود</a></li>
+          <li><a href="pages/laws.html" class="hover:text-teal-700">بانک قوانین</a></li>
+          <li><a href="about-project.html" class="hover:text-teal-700">درباره طرح</a></li>
+          <li><a href="pages/legal-terms.html" class="hover:text-teal-700">شرایط استفاده</a></li>
+          <li><a href="pages/privacy.html" class="hover:text-teal-700">حریم خصوصی</a></li>
         </ul>
       </div>
       <div>

@@ -59,6 +59,29 @@
     });
   }
 
+  var ADMIN_NAV_LINKS =
+    '<a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📊 داشبورد</a>' +
+    '<a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">💬 سؤالات</a>' +
+    '<a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📋 قراردادها</a>' +
+    '<a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📚 قوانین</a>' +
+    '<a href="risk.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🎯 ریسک</a>' +
+    '<a href="academy.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🎓 آکادمی</a>' +
+    '<a href="sports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🏃 ورزشی</a>' +
+    '<a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">👨‍⚖️ متخصصان</a>' +
+    '<a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🤖 AI</a>' +
+    '<a href="dispute.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">⚖️ داوری</a>' +
+    '<a href="cases.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📰 آراء</a>' +
+    '<a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">👥 کاربران</a>' +
+    '<a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📈 گزارش‌ها</a>' +
+    '<a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">⚙️ تنظیمات</a>';
+
+  function syncAdminNav() {
+    var sidebar = document.getElementById('admin-sidebar');
+    if (!sidebar) return;
+    var nav = sidebar.querySelector('nav');
+    if (nav) nav.innerHTML = ADMIN_NAV_LINKS;
+  }
+
   function markActiveNav() {
     var path = window.location.pathname.split('/').pop() || 'dashboard.html';
     document.querySelectorAll('.admin-sidebar-link').forEach(function (link) {
@@ -68,6 +91,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    syncAdminNav();
     initAdminDrawer();
     initModals();
     initDemoToast();

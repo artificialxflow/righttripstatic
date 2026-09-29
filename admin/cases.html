@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>آراء | پنل</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 antialiased">
+  <div id="admin-overlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 w-64 translate-x-full bg-white border-l-2 lg:static lg:translate-x-0 p-3 text-sm">
+      <a href="cases.html" class="admin-sidebar-link block p-2 rounded-lg">📰 بانک آراء</a>
+      <a href="content.html" class="admin-sidebar-link block p-2 rounded-lg">📚 محتوا</a>
+    </aside>
+    <div class="flex-1"><header class="border-b bg-white p-3"><button id="admin-menu-toggle" class="lg:hidden">☰</button> مطالعات و آراء</header>
+    <main class="p-6 space-y-2"><div class="card-bordered p-4 text-sm">مطالعه موردی — لغو تور (anonymized)</div></main></div>
+  </div>
+  <script src="../assets/js/common.js"></script><script src="../assets/js/admin.js"></script>
+</body>
+</html>

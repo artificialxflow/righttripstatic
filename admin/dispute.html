@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داوری | پنل</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 antialiased">
+  <div id="admin-overlay" class="hidden fixed inset-0 bg-black/40 z-40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 w-64 translate-x-full bg-white border-l-2 lg:static lg:translate-x-0 p-3">
+      <a href="dispute.html" class="admin-sidebar-link block p-2 rounded-lg bg-teal-50">⚖️ درخواست‌های داوری</a>
+      <a href="dashboard.html" class="admin-sidebar-link block p-2 rounded-lg mt-1">📊 داشبورد</a>
+    </aside>
+    <div class="flex-1"><header class="bg-white border-b p-3"><button id="admin-menu-toggle" class="lg:hidden">☰</button> داوری</header>
+    <main class="p-6"><table class="card-bordered w-full text-sm"><tr><td class="p-3">اختلاف قرارداد تور</td><td class="p-3"><span class="badge badge-pending">در بررسی</span></td></tr></table></main></div>
+  </div>
+  <script src="../assets/js/common.js"></script><script src="../assets/js/admin.js"></script>
+</body>
+</html>

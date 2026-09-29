@@ -1,38 +1,32 @@
-# حق‌گرد | RightTrip Law
+# حقوق گردشگری | حق‌گرد — RightTrip Law
 
-پلتفرم هوشمند حقوق گردشگری — **نسخه استاتیک** (HTML + Tailwind CDN + JavaScript).
+پلتفرم هوشمند حقوق گردشگری (فرانت استاتیک).
 
-## ساختار فایل‌ها
+## ساختار
 
 ```
-index.html          — لندینگ
-login.html          — ورود نمایشی
-assets/css/custom.css
-assets/js/common.js — منو، FAQ، اسکرول
-assets/js/admin.js  — پنل ادمین
-admin/
-  dashboard.html
-  questions.html
-  contracts.html
-  content.html
-  experts.html
-  ai.html
-  users.html
-  reports.html
-  settings.html
+index.html              لندینگ (۱۱ خدمت، خراسان رضوی)
+about-project.html      معرفی طرح برای مرکز نوآوری
+login.html / register.html
+pages/                  ۱۱ خدمت + legal + privacy
+assets/css/fonts.css    Vazirmatn محلی (assets/fonts)
+assets/js/layout.js     هدر/فوتر صفحات داخلی
+admin/                  پنل مدیریت
+todo.md                 چک‌لیست فازها
 ```
 
 ## اجرا
-
-فایل `index.html` را در مرورگر باز کنید، یا با یک سرور محلی:
 
 ```bash
 npx serve .
 ```
 
-ورود از `login.html` به `admin/dashboard.html` (بدون احراز هویت واقعی).
+باز کردن `http://localhost:3000/index.html`
 
-## محدودیت‌ها
+## فونت
 
-- بدون بک‌اند و API
-- داده‌ها و عملیات نمایشی هستند
+فقط از `assets/fonts/Vazirmatn-*.woff2` — بدون CDN گوگل.
+
+## محدودیت
+
+بدون بک‌اند؛ داده و عملیات نمایشی.

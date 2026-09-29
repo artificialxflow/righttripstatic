@@ -4,28 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>داشبورد | حق‌گرد — پنل مدیریت</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
-<body class="bg-slate-100 font-[Vazirmatn] text-slate-800 antialiased">
+<body class="bg-slate-100 text-slate-800 antialiased">
   <div id="global-toast" class="hidden"></div>
   <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
 
   <div class="flex min-h-screen">
     <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 flex w-64 translate-x-full flex-col border-l-2 border-slate-200 bg-white transition-transform lg:static lg:translate-x-0">
       <div class="border-b-2 border-slate-100 p-4">
-        <a href="../index.html" class="font-bold text-teal-800">حق‌گرد</a>
+        <a href="../index.html" class="font-bold text-teal-800">حقوق گردشگری</a>
         <p class="text-xs text-slate-500">پنل مدیریت</p>
       </div>
-      <nav class="flex-1 overflow-y-auto p-3 text-sm">
+      <nav class="flex-1 overflow-y-auto p-3 text-sm space-y-0.5">
         <a href="dashboard.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📊 داشبورد</a>
-        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">💬 سؤالات حقوقی</a>
+        <a href="questions.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">💬 سؤالات</a>
         <a href="contracts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📋 قراردادها</a>
-        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📚 محتوا و قوانین</a>
+        <a href="content.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📚 قوانین</a>
+        <a href="risk.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🎯 ریسک</a>
+        <a href="academy.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🎓 آکادمی</a>
+        <a href="sports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🏃 ورزشی</a>
         <a href="experts.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">👨‍⚖️ متخصصان</a>
-        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🤖 دستیار AI</a>
+        <a href="ai.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">🤖 AI</a>
+        <a href="dispute.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">⚖️ داوری</a>
+        <a href="cases.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📰 آراء</a>
         <a href="users.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">👥 کاربران</a>
         <a href="reports.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">📈 گزارش‌ها</a>
         <a href="settings.html" class="admin-sidebar-link block rounded-lg px-3 py-2.5 font-medium hover:bg-slate-50">⚙️ تنظیمات</a>

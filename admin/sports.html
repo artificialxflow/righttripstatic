@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورزشی | پنل</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="bg-slate-100 antialiased">
+  <div id="admin-overlay" class="fixed inset-0 z-40 hidden bg-black/40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="admin-sidebar" class="fixed inset-y-0 right-0 z-50 w-64 translate-x-full border-l-2 bg-white lg:static lg:translate-x-0 flex flex-col">
+      <div class="p-4 border-b font-bold text-teal-800"><a href="../index.html">حقوق گردشگری</a></div>
+      <nav class="p-3 text-sm"><a href="sports.html" class="admin-sidebar-link block py-2 px-3 rounded-lg">🏃 محتوای ورزشی</a><a href="dashboard.html" class="admin-sidebar-link block py-2 px-3 rounded-lg">📊 داشبورد</a></nav>
+    </aside>
+    <div class="flex-1"><header class="px-4 py-3 border-b bg-white"><button id="admin-menu-toggle" class="lg:hidden">☰</button> <span class="text-sm font-semibold">حقوق گردشگری ورزشی</span></header>
+    <main class="p-6 card-bordered m-4"><p class="text-sm">مدیریت مقالات تخصصی ورزش و گردشگری (نمایشی)</p></main></div>
+  </div>
+  <script src="../assets/js/common.js"></script><script src="../assets/js/admin.js"></script>
+</body>
+</html>

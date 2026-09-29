@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-base="../">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ارزیابی ریسک | حقوق گردشگری</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+</head>
+<body class="flex min-h-screen flex-col bg-slate-50 antialiased">
+  <div id="site-header-mount"></div>
+  <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6">
+    <h1 class="section-title reveal">ارزیابی ریسک حقوقی 🎯</h1>
+    <form class="mt-8 card-bordered p-6 space-y-4 reveal" onsubmit="event.preventDefault(); document.getElementById('risk-result').classList.remove('hidden');">
+      <p class="text-sm font-medium">آیا قرارداد کتبی با مشتری دارید؟</p>
+      <label class="flex gap-2 text-sm"><input type="radio" name="q1" /> بله</label>
+      <label class="flex gap-2 text-sm"><input type="radio" name="q1" /> خیر</label>
+      <p class="text-sm font-medium pt-2">بیمه مسئولیت فعال است؟</p>
+      <label class="flex gap-2 text-sm"><input type="radio" name="q2" /> بله</label>
+      <label class="flex gap-2 text-sm"><input type="radio" name="q2" /> خیر</label>
+      <button type="submit" class="btn-primary w-full">محاسبه (نمایشی)</button>
+    </form>
+    <div id="risk-result" class="hidden mt-6 card-bordered border-amber-400 bg-amber-50 p-5 reveal">
+      <p class="font-bold text-amber-900">سطح ریسک: متوسط</p>
+      <p class="mt-2 text-sm">توصیه: تکمیل قرارداد و مشاوره تخصصی.</p>
+    </div>
+  </main>
+  <div id="site-footer-mount"></div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/layout.js"></script>
+</body>
+</html>
